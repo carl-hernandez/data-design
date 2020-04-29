@@ -4,14 +4,48 @@
     <meta   charset="utf-8" />
     <title> Data Design Project</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Index</title>
+    <title>Conceptual Model</title>
 </head>
 <body>
+
 <div class="navBar">
     <a href="./persona.html">Persona</a>
     <a href="./user-story.html">User Story</a>
     <a href="./interaction-flow.html">Use Case and Interaction Flow</a>
     <a href="conceptual-model.html">Conceptual Model</a>
+</div>
+
+<div>
+    <h1> Entities and Attributes</h1>
+        <h2>User</h2>
+            <ul>
+                <li>userId (primary key)</li>
+                <li>userEmail (account creation)</li>
+                <li>userHash (account password)</li>
+            </ul>
+        <h2>Card</h2>
+            <ul>
+                <li>cardId (primary key)</li>
+                <li>cardName</li>
+                <li>cardPicture</li>
+                <li>cardPrice</li>
+                <li>cardSetId</li>
+            </ul>
+        <h2>Watch List</h2>
+            <ul>
+                <li>watchListCardId</li>
+                <li>watchListUserId</li>
+            </ul>
+    <h1>Relations</h1>
+        <ul>
+            <li>One User can have one watch list (1 to 1)</li>
+            <li>Many cards can be on many watch lists (many to many)</li>
+        </ul>
+</div>
+
+<div>
+    <h1>Entity Relation Diagram</h1>
+        <img src="ERD.JPG" alt="Boxes and Lines">
 </div>
 </body>
 </html>
