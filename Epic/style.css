@@ -1,4 +1,13 @@
+.body {
+	padding: 1em;
+}
+
 .navBar {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
+	padding: 1em;
+}
+
+.navBar a {
+	margin: 0 1em;
 }
