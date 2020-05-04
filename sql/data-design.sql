@@ -1,13 +1,13 @@
 ALTER DATABASE ddProject SET utf8 COLLATE utf8_unicode_ci;
 
-DROP TABLE IF EXISTS {}
-DROP TABLE IF EXISTS {}
-DROP TABLE IF EXISTS {}
+DROP TABLE IF EXISTS watchList;
+DROP TABLE IF EXISTS card;
+DROP TABLE IF EXISTS profile;
 
 CREATE TABLE card(
     cardId BINARY(16) not null,
     cardName VARCHAR(150) not null,
-    cardPictureUrl VARCHAR(150),
+    cardPictureUrl VARCHAR(255),
     cardPrice DECIMAL(6,2) not null,
     UNIQUE(cardName),
     PRIMARY KEY(cardId)
