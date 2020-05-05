@@ -16,7 +16,7 @@ CREATE TABLE card(
 CREATE TABLE profile(
     profileId BINARY(16) not null,
     profileEmail VARCHAR(128) not null,
-    profileHash CHAR(32),
+    profileHash CHAR(97),
     UNIQUE(profileEmail),
     PRIMARY KEY (profileId)
 );
