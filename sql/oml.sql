@@ -8,10 +8,14 @@
 
 INSERT INTO card (cardId, cardName, cardPictureUrl, cardPrice) VALUES (UNHEX("4441294d90b1471d86bbea675f8a72fa"), "Forbidden Alchemy", "https://static.mtgstocks.com/cardimages/226758.jpg", 0.12);
 INSERT INTO card (cardId, cardName, cardPictureUrl, cardPrice) VALUES (unhex("8929aaeece8041e0a7d6662bf45cd961"), "Black Lotus", "https://static.mtgstocks.com/cardimages/298.jpg", 4200.00);
-INSERT INTO profile (profileId, profileEmail, profileHash) VALUES (unhex("22c43a7b981443c4bd98002262e498d1"), "timmy@bankrupt.com", "123abC.");
+INSERT INTO card (cardID, cardName, cardPictureUrl, cardPrice) VALUES (UNEHX("5cebc358b9f340299cd84a25b9b11b52"), "Blacker Lotus", "https://static.mtgstocks.com/cardimages/9764.jpg", 6.41);
+INSERT INTO profile (profileId, profileEmail, profileHash) VALUES (UNHEX("22c43a7b981443c4bd98002262e498d1"), "timmy@bankrupt.com", "123abC.");
 
 UPDATE profile SET profileHash = "L0ng3r_password!" where profileId = unhex("22c43a7b981443c4bd98002262e498d1");
 
 DELETE FROM card WHERE cardId = unhex ("8929aaeece8041e0a7d6662bf45cd961");
 
 INSERT INTO watchList VALUES ( UNHEX("4441294d90b1471d86bbea675f8a72fa"), UNHEX("22c43a7b981443c4bd98002262e498d1"));
+
+SELECT cardId, cardName, cardPrice from card WHERE cardName LIKE %a%;
+
