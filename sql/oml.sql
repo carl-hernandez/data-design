@@ -12,11 +12,11 @@ INSERT INTO card (cardId, cardName, cardPictureUrl, cardPrice) VALUES (unhex("89
 INSERT INTO card (cardID, cardName, cardPictureUrl, cardPrice) VALUES (UNEHX("5cebc358b9f340299cd84a25b9b11b52"), "Blacker Lotus", "https://static.mtgstocks.com/cardimages/9764.jpg", 6.41);
 
 --insert profile into profile table
-INSERT INTO profile (profileId, profileEmail, profileHash) VALUES (UNHEX("22c43a7b981443c4bd98002262e498d1"), "timmy@bankrupt.com", "123abC.");
+INSERT INTO profile (profileId, profileEmail, profileHash) VALUES (UNHEX("22c43a7b981443c4bd98002262e498d1"), "timmy@bankrupt.com", "$argon2i$v=19$m=16,t=2,p=1$bHRNSVRTdGYzaWVIWEt1ZA$1nWTFGy6cIjhH9+Ah4IRmA");
 
 
 --update profile password
-UPDATE profile SET profileHash = "L0ng3r_password!" where profileId = unhex("22c43a7b981443c4bd98002262e498d1");
+UPDATE profile SET profileHash = "$argon2i$v=19$m=16,t=2,p=1$cll4ZW1SYUQ1Q2ZxQ1RnMg$DFcixEYPvR6wwF2pOY+fMQ" where profileId = unhex("22c43a7b981443c4bd98002262e498d1");
 
 
 --delete Black Lotus from card table
